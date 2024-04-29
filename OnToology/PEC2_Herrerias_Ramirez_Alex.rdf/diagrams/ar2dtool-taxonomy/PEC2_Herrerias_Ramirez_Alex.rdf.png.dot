@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "PEC2-herrerias-ramirez-alex:Year" "PEC2-herrerias-ramirez-alex:TypeFlight" "PEC2-herrerias-ramirez-alex:Review" "PEC2-herrerias-ramirez-alex:SoloLeisurePassenger" "PEC2-herrerias-ramirez-alex:Flight" "PEC2-herrerias-ramirez-alex:FirstClassSeat" "PEC2-herrerias-ramirez-alex:OriginCountry" "PEC2-herrerias-ramirez-alex:Rating9_10" "PEC2-herrerias-ramirez-alex:Rating5_8" "PEC2-herrerias-ramirez-alex:DestinationCountry" "PEC2-herrerias-ramirez-alex:Airbus" "PEC2-herrerias-ramirez-alex:EconomyClassSeat" "PEC2-herrerias-ramirez-alex:Rating" "PEC2-herrerias-ramirez-alex:Boeing" "PEC2-herrerias-ramirez-alex:Airline" "PEC2-herrerias-ramirez-alex:SeatType" "PEC2-herrerias-ramirez-alex:NeutralRecommendation" "PEC2-herrerias-ramirez-alex:Aircraft" "PEC2-herrerias-ramirez-alex:BusinesssClassSeat" "PEC2-herrerias-ramirez-alex:PremiumEconomySeat" "PEC2-herrerias-ramirez-alex:FlighDate" "PEC2-herrerias-ramirez-alex:CoupleLeisurePassenger" "PEC2-herrerias-ramirez-alex:Rating1_4" "PEC2-herrerias-ramirez-alex:NotRecommended" "PEC2-herrerias-ramirez-alex:Month" "PEC2-herrerias-ramirez-alex:Recommended" "PEC2-herrerias-ramirez-alex:Recommendation" "PEC2-herrerias-ramirez-alex:BusinessPassenger" "PEC2-herrerias-ramirez-alex:PassengerType" ; /*classes style*/
+	"PEC2-herrerias-ramirez-alex:BusinesssClassSeat" -> "PEC2-herrerias-ramirez-alex:SeatType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:SeatType" -> "PEC2-herrerias-ramirez-alex:Review" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Airline" -> "PEC2-herrerias-ramirez-alex:Review" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:EconomyClassSeat" -> "PEC2-herrerias-ramirez-alex:SeatType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Year" -> "PEC2-herrerias-ramirez-alex:FlighDate" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Airbus" -> "PEC2-herrerias-ramirez-alex:Aircraft" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:DestinationCountry" -> "PEC2-herrerias-ramirez-alex:Flight" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:PassengerType" -> "PEC2-herrerias-ramirez-alex:Review" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Rating5_8" -> "PEC2-herrerias-ramirez-alex:Rating" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:NeutralRecommendation" -> "PEC2-herrerias-ramirez-alex:Recommendation" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Recommended" -> "PEC2-herrerias-ramirez-alex:Recommendation" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Boeing" -> "PEC2-herrerias-ramirez-alex:Aircraft" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:CoupleLeisurePassenger" -> "PEC2-herrerias-ramirez-alex:PassengerType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:FlighDate" -> "PEC2-herrerias-ramirez-alex:Flight" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:OriginCountry" -> "PEC2-herrerias-ramirez-alex:Flight" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Rating1_4" -> "PEC2-herrerias-ramirez-alex:Rating" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:TypeFlight" -> "PEC2-herrerias-ramirez-alex:Flight" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Rating" -> "PEC2-herrerias-ramirez-alex:Review" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:NotRecommended" -> "PEC2-herrerias-ramirez-alex:Recommendation" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Rating9_10" -> "PEC2-herrerias-ramirez-alex:Rating" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Aircraft" -> "PEC2-herrerias-ramirez-alex:Flight" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:BusinessPassenger" -> "PEC2-herrerias-ramirez-alex:PassengerType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:SoloLeisurePassenger" -> "PEC2-herrerias-ramirez-alex:PassengerType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:PremiumEconomySeat" -> "PEC2-herrerias-ramirez-alex:SeatType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:FirstClassSeat" -> "PEC2-herrerias-ramirez-alex:SeatType" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Month" -> "PEC2-herrerias-ramirez-alex:FlighDate" [ label = "rdfs:subClassOf" ];
+	"PEC2-herrerias-ramirez-alex:Recommendation" -> "PEC2-herrerias-ramirez-alex:Review" [ label = "rdfs:subClassOf" ];
+
+}

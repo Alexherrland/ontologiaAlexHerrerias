@@ -1,0 +1,152 @@
+{
+  "@context" : {
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRating",
+      "@type" : "@id"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"
+    },
+    "Recommendation" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "DestinationCountry" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#DestinationCountry"
+    },
+    "Recommended" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommended"
+    },
+    "hasSeatValue" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue"
+    },
+    "BusinesssClassSeat" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinesssClassSeat"
+    },
+    "hasRecommendation" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRecommendation",
+      "@type" : "@id"
+    },
+    "SoloLeisurePassenger" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SoloLeisurePassenger"
+    },
+    "hasDestination" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestination",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "BusinessPassenger" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinessPassenger"
+    },
+    "hasDatePublished" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDatePublished",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasOriginCountry" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOriginCountry",
+      "@type" : "@id"
+    },
+    "NeutralRecommendation" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NeutralRecommendation"
+    },
+    "Rating9_10" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating9_10"
+    },
+    "hasRatingValue" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"
+    },
+    "NotRecommended" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NotRecommended"
+    },
+    "FirstClassSeat" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FirstClassSeat"
+    },
+    "Rating1_4" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating1_4"
+    },
+    "FlighDate" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FlighDate"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Aircraft"
+    },
+    "OriginCountry" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#OriginCountry"
+    },
+    "Airbus" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airbus"
+    },
+    "EconomyClassSeat" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#EconomyClassSeat"
+    },
+    "hasPassengerType" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerType",
+      "@type" : "@id"
+    },
+    "CoupleLeisurePassenger" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#CoupleLeisurePassenger"
+    },
+    "hasSeatType" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatType",
+      "@type" : "@id"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airline"
+    },
+    "Year" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Year"
+    },
+    "TypeFlight" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#TypeFlight"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"
+    },
+    "Boeing" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Boeing"
+    },
+    "Rating5_8" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating5_8"
+    },
+    "hasOrigin" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOrigin",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAirline" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasAirline",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "PremiumEconomySeat" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PremiumEconomySeat"
+    },
+    "Month" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Month"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"
+    },
+    "hasDestinationCountry" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestinationCountry",
+      "@type" : "@id"
+    },
+    "hasPassengerValue" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue"
+    },
+    "PassengerType" : {
+      "@id" : "http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType"
+    }
+  }
+}

@@ -1,0 +1,644 @@
+@prefix : <http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#> .
+
+<http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex> rdf:type owl:Ontology ;
+                                                                                  <http://purl.org/dc/terms/license> "Ontologia de uso academico" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasAirline
+:hasAirline rdf:type owl:ObjectProperty ;
+            rdfs:domain :Review ;
+            rdfs:range :Airline ;
+            rdfs:comment "Match a review with the airline it refers to" ;
+            rdfs:label "hasAirline" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestinationCountry
+:hasDestinationCountry rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Flight ;
+                       rdfs:range :DestinationCountry ;
+                       rdfs:comment "Connect a flight with your destination country" ;
+                       rdfs:label "hasDestinationCountry" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOriginCountry
+:hasOriginCountry rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Flight ;
+                  rdfs:range :OriginCountry ;
+                  rdfs:comment "Connect a flight with your home country" ;
+                  rdfs:label "hasOriginCountry" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerType
+:hasPassengerType rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Review ;
+                  rdfs:range :PassengerType ;
+                  rdfs:comment "hasPassengerType" ;
+                  rdfs:label "hasPassengerType" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRating
+:hasRating rdf:type owl:ObjectProperty ;
+           rdfs:domain :Review ;
+           rdfs:range :Rating ;
+           rdfs:comment "Connect the score with your review.." ;
+           rdfs:label "hasRating" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRecommendation
+:hasRecommendation rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Review ;
+                   rdfs:range :Recommendation ;
+                   rdfs:comment "Connect a review with its recommendation status." ;
+                   rdfs:label "hasRecommendation" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatType
+:hasSeatType rdf:type owl:ObjectProperty ;
+             rdfs:domain :Review ;
+             rdfs:range :SeatType ;
+             rdfs:comment "Match a review with your seat type" ;
+             rdfs:label "hasSeatType" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDatePublished
+:hasDatePublished rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Review ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "hasDatePublished" ;
+                  rdfs:label "hasDatePublished" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestination
+:hasDestination rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Flight ;
+                rdfs:range xsd:string ;
+                rdfs:comment "hasDestination" ;
+                rdfs:label "hasDestination" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOrigin
+:hasOrigin rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Flight ;
+           rdfs:range xsd:string ;
+           rdfs:comment "hasOrigin" ;
+           rdfs:label "hasOrigin" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue
+:hasPassengerValue rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :PassengerType ;
+                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 1
+                                                       ]
+                                                       [ xsd:maxInclusive 3
+                                                       ]
+                                                     )
+                              ] ;
+                   rdfs:comment "hasPassengerValue" ;
+                   rdfs:label "hasPassengerValue" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue
+:hasRatingValue rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Rating ;
+                rdfs:range [ rdf:type rdfs:Datatype ;
+                             owl:onDatatype xsd:integer ;
+                             owl:withRestrictions ( [ xsd:minInclusive 1
+                                                    ]
+                                                    [ xsd:maxInclusive 10
+                                                    ]
+                                                  )
+                           ] ;
+                rdfs:comment "hasRatingValue" ;
+                rdfs:label "hasRatingValue" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue
+:hasSeatValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain :SeatType ;
+              rdfs:range [ rdf:type rdfs:Datatype ;
+                           owl:onDatatype xsd:integer ;
+                           owl:withRestrictions ( [ xsd:minInclusive 1
+                                                  ]
+                                                  [ xsd:maxInclusive 4
+                                                  ]
+                                                )
+                         ] ;
+              rdfs:comment "hasSeatValue" ;
+              rdfs:label "hasSeatValue" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airbus
+:Airbus rdf:type owl:Class ;
+        rdfs:subClassOf :Aircraft ;
+        rdfs:comment "It represents an Airbus brand airplane." ;
+        rdfs:label "Airbus" ;
+        rdfs:sameAs "http://dbpedia.org/resource/Airbus" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:subClassOf :Flight ;
+          rdfs:comment "Represents the type of aircraft used for a flight. It can be an Airbus or a Boeing." ;
+          rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:subClassOf :Review ;
+         rdfs:comment "Represents the airline providing the flight. It could be Ryanair or Qatar Airways." ;
+         rdfs:label "Airline" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Boeing
+:Boeing rdf:type owl:Class ;
+        rdfs:subClassOf :Aircraft ;
+        rdfs:comment "It represents an Boeing brand airplane." ;
+        rdfs:label "Boeing" ;
+        rdfs:sameAs "http://dbpedia.org/resource/Boeing" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinessPassenger
+:BusinessPassenger rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasPassengerValue ;
+                                         owl:hasValue 1
+                                       ] ;
+                   rdfs:subClassOf :PassengerType ;
+                   rdfs:comment "Represents a passenger traveling for business." ;
+                   rdfs:label "Business Passenger" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinesssClassSeat
+:BusinesssClassSeat rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSeatValue ;
+                                          owl:hasValue 1
+                                        ] ;
+                    rdfs:subClassOf :SeatType ;
+                    rdfs:comment "Represents a business class seat." ;
+                    rdfs:label "Business Class Seat" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#CoupleLeisurePassenger
+:CoupleLeisurePassenger rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasPassengerValue ;
+                                              owl:hasValue 2
+                                            ] ;
+                        rdfs:subClassOf :PassengerType ;
+                        rdfs:comment "It represents a passenger traveling as a couple for leisure." ;
+                        rdfs:label "Couple Leisure Passenger" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#DestinationCountry
+:DestinationCountry rdf:type owl:Class ;
+                    rdfs:subClassOf :Flight ;
+                    rdfs:comment "Represents the country of destination of the flight." ;
+                    rdfs:label "DestinationCountry" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#EconomyClassSeat
+:EconomyClassSeat rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasSeatValue ;
+                                        owl:hasValue 2
+                                      ] ;
+                  rdfs:subClassOf :SeatType ;
+                  rdfs:comment "Represents an economy class seat." ;
+                  rdfs:label "Economy Class Seat" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FirstClassSeat
+:FirstClassSeat rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasSeatValue ;
+                                      owl:hasValue 3
+                                    ] ;
+                rdfs:subClassOf :SeatType ;
+                rdfs:comment "It represents a first class seat.." ;
+                rdfs:label "First Class Seat" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FlighDate
+:FlighDate rdf:type owl:Class ;
+           rdfs:subClassOf :Flight ;
+           rdfs:comment "Represents the date on which the trip took place." ;
+           rdfs:label "FlightDate" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:comment "Represents an airline flight, including details such as aircraft type, flight date, flight type, and origin and destination countries." ;
+        rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Month
+:Month rdf:type owl:Class ;
+       rdfs:subClassOf :FlighDate ;
+       rdfs:comment "Represents the month in which the trip took place." ;
+       rdfs:label "Month" ;
+       rdfs:sameAs "http://dbpedia.org/resource/Month" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NeutralRecommendation
+:NeutralRecommendation rdf:type owl:Class ;
+                       rdfs:subClassOf :Recommendation ;
+                       rdfs:comment "It represents a review in which the passenger is neutral." ;
+                       rdfs:label "NeutralRecommendation" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NotRecommended
+:NotRecommended rdf:type owl:Class ;
+                rdfs:subClassOf :Recommendation ;
+                rdfs:comment "It represents a review in which the passenger does not recommend the airline." ;
+                rdfs:label "Not Recommended" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#OriginCountry
+:OriginCountry rdf:type owl:Class ;
+               rdfs:subClassOf :Flight ;
+               rdfs:comment "Represents the country of origin of the flight." ;
+               rdfs:label "OriginContry" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType
+:PassengerType rdf:type owl:Class ;
+               rdfs:subClassOf :Review ;
+               rdfs:comment """Represents the type of passenger making the review. You can be a solo leisure passenger, a couple leisure passenger, a business passenger.
+
+Each type of passenger is coded with the following values:
+Business Passenger: 1
+Couple Leisure Passenger: 2
+Solo Leisure Passenger: 3""" ;
+               rdfs:label "Passenger Type" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PremiumEconomySeat
+:PremiumEconomySeat rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSeatValue ;
+                                          owl:hasValue 4
+                                        ] ;
+                    rdfs:subClassOf :SeatType ;
+                    rdfs:comment "Represents a premium economy class seat." ;
+                    rdfs:label "Premium Economy Seat" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:subClassOf :Review ;
+        rdfs:comment "Represents the rating given by the passenger. It can be 1-4, 5-8, 9-10." .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating1_4
+:Rating1_4 rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasRatingValue ;
+                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                      owl:onDatatype xsd:integer ;
+                                                      owl:withRestrictions ( [ xsd:minInclusive 1
+                                                                             ]
+                                                                             [ xsd:maxInclusive 4
+                                                                             ]
+                                                                           )
+                                                    ]
+                               ] ;
+           rdfs:subClassOf :Rating ;
+           rdfs:comment "Represents a rating between 1 and 4." ;
+           rdfs:label "Rating 1-4" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating5_8
+:Rating5_8 rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasRatingValue ;
+                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                      owl:onDatatype xsd:integer ;
+                                                      owl:withRestrictions ( [ xsd:minInclusive 5
+                                                                             ]
+                                                                             [ xsd:maxInclusive 8
+                                                                             ]
+                                                                           )
+                                                    ]
+                               ] ;
+           rdfs:subClassOf :Rating ;
+           rdfs:comment "Represents a rating between 5 and 8." ;
+           rdfs:label "Rating 5-8" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating9_10
+:Rating9_10 rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasRatingValue ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:integer ;
+                                                       owl:withRestrictions ( [ xsd:minInclusive 9
+                                                                              ]
+                                                                              [ xsd:maxInclusive 10
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf :Rating ;
+            rdfs:comment "Represents a rating between 9 and 10.." ;
+            rdfs:label "Rating 9-10" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation
+:Recommendation rdf:type owl:Class ;
+                rdfs:subClassOf :Review ;
+                rdfs:comment "It represents the passenger's recommendation. It can be recommended, not recommended or neutral." ;
+                rdfs:label "Recommendation" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommended
+:Recommended rdf:type owl:Class ;
+             rdfs:subClassOf :Recommendation ;
+             rdfs:comment "It represents a review in which the passenger recommends the airline." ;
+             rdfs:label "Recommended" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review
+:Review rdf:type owl:Class ;
+        rdfs:comment "Representa una reseña de un vuelo de una aerolínea, incluyendo detalles como la aerolínea, el tipo de asiento, el tipo de pasajero, la calificación y la recomendación." ;
+        rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:subClassOf :Review ;
+          rdfs:comment """Represents the type of seat reserved by the passenger. It can be Business Class, Economy Class, First Class, Premium Economy.
+
+
+Each seat type is coded with the following values:
+Business Class Seat: 1
+Economy Class Seat: 2
+First Class Seat: 3
+Premium Economy Seat: 4""" ;
+          rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SoloLeisurePassenger
+:SoloLeisurePassenger rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasPassengerValue ;
+                                            owl:hasValue 3
+                                          ] ;
+                      rdfs:subClassOf :PassengerType ;
+                      rdfs:comment "It represents a passenger who travels alone for leisure." ;
+                      rdfs:label "Solo Leisure Passenger" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#TypeFlight
+:TypeFlight rdf:type owl:Class ;
+            rdfs:subClassOf :Flight ;
+            rdfs:comment "Represents the type of flight that was performed." ;
+            rdfs:label "TypeFlight" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Year
+:Year rdf:type owl:Class ;
+      rdfs:subClassOf :FlighDate ;
+      rdfs:comment "Represents the year in which the trip took place." ;
+      rdfs:label "Year" ;
+      rdfs:sameAs "http://dbpedia.org/resource/Year" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Qatar_Airways
+:Qatar_Airways rdf:type owl:NamedIndividual ;
+               rdfs:comment "instance of Airline" ;
+               rdfs:label "Qatar_Airways" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_1
+:Review_1 rdf:type owl:NamedIndividual ;
+          :hasAirline :Qatar_Airways ;
+          :hasDestination "Japan" ;
+          :hasOrigin "Spain" ;
+          :hasPassengerValue 2 ;
+          :hasRatingValue 8 ;
+          :hasSeatValue 3 ;
+          rdfs:comment "Review_1" ;
+          rdfs:label "Review_1" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_2
+:Review_2 rdf:type owl:NamedIndividual ;
+          :hasAirline :Ryanair ;
+          :hasDestination "France" ;
+          :hasOrigin "Japan" ;
+          :hasPassengerValue 1 ;
+          :hasRatingValue 2 ;
+          :hasSeatValue 4 ;
+          rdfs:comment "Review_2" ;
+          rdfs:label "Review_2" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_3
+:Review_3 rdf:type owl:NamedIndividual ;
+          :hasAirline :Qatar_Airways ;
+          :hasDestination "Norway" ;
+          :hasOrigin "Brazil" ;
+          :hasPassengerValue 2 ;
+          :hasRatingValue 10 ;
+          :hasSeatValue 1 ;
+          rdfs:comment "Review_3" ;
+          rdfs:label "Review_3" .
+
+
+###  http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Ryanair
+:Ryanair rdf:type owl:NamedIndividual ,
+                  :Airline ;
+         rdfs:comment "instance of Airline" ;
+         rdfs:label "ryanair" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BusinessPassenger
+                :CoupleLeisurePassenger
+                :SoloLeisurePassenger
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BusinesssClassSeat
+                :EconomyClassSeat
+                :FirstClassSeat
+                :PremiumEconomySeat
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Rating1_4
+                :Rating5_8
+                :Rating9_10
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#rating> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdfs:comment "Recommended review" ;
+   rdfs:label "Recommended review" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRatingValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#rating>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#rating> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Recommended ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Not recommended review" ;
+   rdfs:label "Not recommended review" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRatingValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#rating>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#rating> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NotRecommended ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Neutral review" ;
+   rdfs:label "Neutral review" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRatingValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#rating>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#rating> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 5 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeutralRecommendation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
