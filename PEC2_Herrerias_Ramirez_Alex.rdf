@@ -1,0 +1,990 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex/"
+     xml:base="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/alexh/ontologies/2024/3/untitled-ontology-6#"
+     xmlns:PEC2-herrerias-ramirez-alex="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex">
+        <terms:license>Ontologia de uso academico</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasAirline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasAirline">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airline"/>
+        <rdfs:comment>Match a review with the airline it refers to</rdfs:comment>
+        <rdfs:label>hasAirline</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestinationCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestinationCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#DestinationCountry"/>
+        <rdfs:comment>Connect a flight with your destination country</rdfs:comment>
+        <rdfs:label>hasDestinationCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOriginCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOriginCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#OriginCountry"/>
+        <rdfs:comment>Connect a flight with your home country</rdfs:comment>
+        <rdfs:label>hasOriginCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType"/>
+        <rdfs:comment>hasPassengerType</rdfs:comment>
+        <rdfs:label>hasPassengerType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating"/>
+        <rdfs:comment>Connect the score with your review..</rdfs:comment>
+        <rdfs:label>hasRating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRecommendation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRecommendation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation"/>
+        <rdfs:comment>Connect a review with its recommendation status.</rdfs:comment>
+        <rdfs:label>hasRecommendation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"/>
+        <rdfs:comment>Match a review with your seat type</rdfs:comment>
+        <rdfs:label>hasSeatType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDatePublished -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDatePublished">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>hasDatePublished</rdfs:comment>
+        <rdfs:label>hasDatePublished</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasDestination">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>hasDestination</rdfs:comment>
+        <rdfs:label>hasDestination</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOrigin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasOrigin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>hasOrigin</rdfs:comment>
+        <rdfs:label>hasOrigin</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>hasPassengerValue</rdfs:comment>
+        <rdfs:label>hasPassengerValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>hasRatingValue</rdfs:comment>
+        <rdfs:label>hasRatingValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>hasSeatValue</rdfs:comment>
+        <rdfs:label>hasSeatValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airbus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airbus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Aircraft"/>
+        <rdfs:comment>It represents an Airbus brand airplane.</rdfs:comment>
+        <rdfs:label>Airbus</rdfs:label>
+        <rdfs:sameAs>http://dbpedia.org/resource/Airbus</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:comment>Represents the type of aircraft used for a flight. It can be an Airbus or a Boeing.</rdfs:comment>
+        <rdfs:label>Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:comment>Represents the airline providing the flight. It could be Ryanair or Qatar Airways.</rdfs:comment>
+        <rdfs:label>Airline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Boeing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Boeing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Aircraft"/>
+        <rdfs:comment>It represents an Boeing brand airplane.</rdfs:comment>
+        <rdfs:label>Boeing</rdfs:label>
+        <rdfs:sameAs>http://dbpedia.org/resource/Boeing</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinessPassenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinessPassenger">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType"/>
+        <rdfs:comment>Represents a passenger traveling for business.</rdfs:comment>
+        <rdfs:label>Business Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinesssClassSeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinesssClassSeat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"/>
+        <rdfs:comment>Represents a business class seat.</rdfs:comment>
+        <rdfs:label>Business Class Seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#CoupleLeisurePassenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#CoupleLeisurePassenger">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType"/>
+        <rdfs:comment>It represents a passenger traveling as a couple for leisure.</rdfs:comment>
+        <rdfs:label>Couple Leisure Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#DestinationCountry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#DestinationCountry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:comment>Represents the country of destination of the flight.</rdfs:comment>
+        <rdfs:label>DestinationCountry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#EconomyClassSeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#EconomyClassSeat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"/>
+        <rdfs:comment>Represents an economy class seat.</rdfs:comment>
+        <rdfs:label>Economy Class Seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FirstClassSeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FirstClassSeat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"/>
+        <rdfs:comment>It represents a first class seat..</rdfs:comment>
+        <rdfs:label>First Class Seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FlighDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FlighDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:comment>Represents the date on which the trip took place.</rdfs:comment>
+        <rdfs:label>FlightDate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight">
+        <rdfs:comment>Represents an airline flight, including details such as aircraft type, flight date, flight type, and origin and destination countries.</rdfs:comment>
+        <rdfs:label>Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Month">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FlighDate"/>
+        <rdfs:comment>Represents the month in which the trip took place.</rdfs:comment>
+        <rdfs:label>Month</rdfs:label>
+        <rdfs:sameAs>http://dbpedia.org/resource/Month</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NeutralRecommendation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NeutralRecommendation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation"/>
+        <rdfs:comment>It represents a review in which the passenger is neutral.</rdfs:comment>
+        <rdfs:label>NeutralRecommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NotRecommended -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NotRecommended">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation"/>
+        <rdfs:comment>It represents a review in which the passenger does not recommend the airline.</rdfs:comment>
+        <rdfs:label>Not Recommended</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#OriginCountry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#OriginCountry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:comment>Represents the country of origin of the flight.</rdfs:comment>
+        <rdfs:label>OriginContry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:comment>Represents the type of passenger making the review. You can be a solo leisure passenger, a couple leisure passenger, a business passenger.
+
+Each type of passenger is coded with the following values:
+Business Passenger: 1
+Couple Leisure Passenger: 2
+Solo Leisure Passenger: 3</rdfs:comment>
+        <rdfs:label>Passenger Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PremiumEconomySeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PremiumEconomySeat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasSeatValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType"/>
+        <rdfs:comment>Represents a premium economy class seat.</rdfs:comment>
+        <rdfs:label>Premium Economy Seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:comment>Represents the rating given by the passenger. It can be 1-4, 5-8, 9-10.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating1_4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating1_4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating"/>
+        <rdfs:comment>Represents a rating between 1 and 4.</rdfs:comment>
+        <rdfs:label>Rating 1-4</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating5_8 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating5_8">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating"/>
+        <rdfs:comment>Represents a rating between 5 and 8.</rdfs:comment>
+        <rdfs:label>Rating 5-8</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating9_10 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating9_10">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating"/>
+        <rdfs:comment>Represents a rating between 9 and 10..</rdfs:comment>
+        <rdfs:label>Rating 9-10</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:comment>It represents the passenger&apos;s recommendation. It can be recommended, not recommended or neutral.</rdfs:comment>
+        <rdfs:label>Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommended -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommended">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommendation"/>
+        <rdfs:comment>It represents a review in which the passenger recommends the airline.</rdfs:comment>
+        <rdfs:label>Recommended</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review">
+        <rdfs:comment>Representa una reseña de un vuelo de una aerolínea, incluyendo detalles como la aerolínea, el tipo de asiento, el tipo de pasajero, la calificación y la recomendación.</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SeatType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+        <rdfs:comment>Represents the type of seat reserved by the passenger. It can be Business Class, Economy Class, First Class, Premium Economy.
+
+
+Each seat type is coded with the following values:
+Business Class Seat: 1
+Economy Class Seat: 2
+First Class Seat: 3
+Premium Economy Seat: 4</rdfs:comment>
+        <rdfs:label>Seat Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SoloLeisurePassenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SoloLeisurePassenger">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasPassengerValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PassengerType"/>
+        <rdfs:comment>It represents a passenger who travels alone for leisure.</rdfs:comment>
+        <rdfs:label>Solo Leisure Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#TypeFlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#TypeFlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Flight"/>
+        <rdfs:comment>Represents the type of flight that was performed.</rdfs:comment>
+        <rdfs:label>TypeFlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FlighDate"/>
+        <rdfs:comment>Represents the year in which the trip took place.</rdfs:comment>
+        <rdfs:label>Year</rdfs:label>
+        <rdfs:sameAs>http://dbpedia.org/resource/Year</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Qatar_Airways -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Qatar_Airways">
+        <rdfs:comment>instance of Airline</rdfs:comment>
+        <rdfs:label>Qatar_Airways</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_1">
+        <PEC2-herrerias-ramirez-alex:hasAirline rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Qatar_Airways"/>
+        <PEC2-herrerias-ramirez-alex:hasDestination>Japan</PEC2-herrerias-ramirez-alex:hasDestination>
+        <PEC2-herrerias-ramirez-alex:hasOrigin>Spain</PEC2-herrerias-ramirez-alex:hasOrigin>
+        <PEC2-herrerias-ramirez-alex:hasPassengerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</PEC2-herrerias-ramirez-alex:hasPassengerValue>
+        <PEC2-herrerias-ramirez-alex:hasRatingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</PEC2-herrerias-ramirez-alex:hasRatingValue>
+        <PEC2-herrerias-ramirez-alex:hasSeatValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</PEC2-herrerias-ramirez-alex:hasSeatValue>
+        <rdfs:comment>Review_1</rdfs:comment>
+        <rdfs:label>Review_1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_2">
+        <PEC2-herrerias-ramirez-alex:hasAirline rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Ryanair"/>
+        <PEC2-herrerias-ramirez-alex:hasDestination>France</PEC2-herrerias-ramirez-alex:hasDestination>
+        <PEC2-herrerias-ramirez-alex:hasOrigin>Japan</PEC2-herrerias-ramirez-alex:hasOrigin>
+        <PEC2-herrerias-ramirez-alex:hasPassengerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</PEC2-herrerias-ramirez-alex:hasPassengerValue>
+        <PEC2-herrerias-ramirez-alex:hasRatingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</PEC2-herrerias-ramirez-alex:hasRatingValue>
+        <PEC2-herrerias-ramirez-alex:hasSeatValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</PEC2-herrerias-ramirez-alex:hasSeatValue>
+        <rdfs:comment>Review_2</rdfs:comment>
+        <rdfs:label>Review_2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review_3">
+        <PEC2-herrerias-ramirez-alex:hasAirline rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Qatar_Airways"/>
+        <PEC2-herrerias-ramirez-alex:hasDestination>Norway</PEC2-herrerias-ramirez-alex:hasDestination>
+        <PEC2-herrerias-ramirez-alex:hasOrigin>Brazil</PEC2-herrerias-ramirez-alex:hasOrigin>
+        <PEC2-herrerias-ramirez-alex:hasPassengerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</PEC2-herrerias-ramirez-alex:hasPassengerValue>
+        <PEC2-herrerias-ramirez-alex:hasRatingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</PEC2-herrerias-ramirez-alex:hasRatingValue>
+        <PEC2-herrerias-ramirez-alex:hasSeatValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</PEC2-herrerias-ramirez-alex:hasSeatValue>
+        <rdfs:comment>Review_3</rdfs:comment>
+        <rdfs:label>Review_3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Ryanair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Ryanair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Airline"/>
+        <rdfs:comment>instance of Airline</rdfs:comment>
+        <rdfs:label>ryanair</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinessPassenger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#CoupleLeisurePassenger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#SoloLeisurePassenger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#BusinesssClassSeat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#EconomyClassSeat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#FirstClassSeat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#PremiumEconomySeat"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating1_4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating5_8"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Rating9_10"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#rating">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>Neutral review</rdfs:comment>
+        <rdfs:label>Neutral review</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#rating"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NeutralRecommendation"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>Recommended review</rdfs:comment>
+        <rdfs:label>Recommended review</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#rating"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Recommended"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>Not recommended review</rdfs:comment>
+        <rdfs:label>Not recommended review</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#hasRatingValue"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#rating"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#Review"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/alexh/ontologies/2024/3/PEC2-herrerias-ramirez-alex#NotRecommended"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
